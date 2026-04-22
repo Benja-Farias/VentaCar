@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "autos")
-public class Auto {
+public class Autos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id_auto;
 
     @NotBlank
     private String Marca;
@@ -27,6 +27,12 @@ public class Auto {
     @NotBlank
     private String año;
 
+    @NotBlank
+    private Integer precio;
+
     @NotNull
-    private Integer patente;
+    private Integer kilometraje;
+
+    @NotNull
+    private Integer estado;
 }

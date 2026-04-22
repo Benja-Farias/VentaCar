@@ -1,7 +1,5 @@
 package com.example.VentaCar.model;
 
-import java.sql.Date;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,25 +11,29 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "empleados")
-public class Empleados {
 
+@Table(name = "clientes")
+public class Clientes {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_emp;
-
-    @OneToOne(mappedBy="empleado")
-    private Empleados empleado;
+    private Integer id_cliente;
 
     @NotBlank
     private String nombre;
 
     @NotBlank
-    private Date apellido;
+    private String apellido;
 
     @NotBlank
-    private Date telefono;
+    private String rut;
+
+    @NotBlank
+    private Integer telefono;
 
     @NotNull
-    private Integer email;
+    private String email;
+
+    @NotNull
+    private String direccion;
 }
