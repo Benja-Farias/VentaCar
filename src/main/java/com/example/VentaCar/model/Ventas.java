@@ -13,22 +13,28 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "empleados")
-public class Empleados {
+@Table(name = "ventas")
+public class Ventas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_emp;
+    private Integer id_venta;
 
     @NotBlank
-    private String nombre;
+    @OneToOne()
+    private Clientes clientes;
 
     @NotBlank
-    private String apellido;
+    @OneToOne()
+    private Empleados empleados;
 
     @NotBlank
-    private Integer telefono;
+    @OneToOne()
+    private Autos autos;
 
-    @NotNull
-    private String email;
+    @NotBlank
+    private Date fecha;
+
+    @NotBlank
+    private Integer Total_venta;
 }

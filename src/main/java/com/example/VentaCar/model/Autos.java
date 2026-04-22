@@ -34,5 +34,5 @@ public class Autos {
     private Integer kilometraje;
 
     @NotNull
-    private Integer estado;
+    private String estado;
 }
