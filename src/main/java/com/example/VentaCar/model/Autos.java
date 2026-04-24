@@ -19,7 +19,10 @@ public class Autos {
     private Integer id_auto;
 
     @NotBlank
-    private String Marca;
+    private String patente;
+
+    @NotBlank
+    private String marca;
 
     @NotBlank
     private String modelo;
