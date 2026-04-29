@@ -20,13 +20,7 @@ public class Clientes {
     private Integer id_cliente;
 
     @NotBlank
-    private String nombre;
-
-    @NotBlank
-    private String apellido;
-
-    @NotBlank
-    private String rut;
+    private String nombre_cliente;
 
     @NotBlank
     private Integer telefono;

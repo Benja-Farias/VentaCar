@@ -33,7 +33,7 @@ public class Ventas {
     private Autos autos;
 
     @NotBlank
-    private Date fecha;
+    private Date fecha_venta;
 
     @NotBlank
     private Integer Total_venta;

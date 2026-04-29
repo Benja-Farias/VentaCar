@@ -21,10 +21,7 @@ public class Empleados {
     private Integer id_emp;
 
     @NotBlank
-    private String nombre;
-
-    @NotBlank
-    private String apellido;
+    private String nombre_empleado;
 
     @NotBlank
     private Integer telefono;
