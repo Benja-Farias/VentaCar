@@ -22,12 +22,12 @@ public class Clientes {
     @NotBlank
     private String nombre_cliente;
 
-    @NotBlank
+    @NotNull
     private Integer telefono;
 
-    @NotNull
+    @NotBlank
     private String email;
 
-    @NotNull
+    @NotBlank
     private String direccion;
 }

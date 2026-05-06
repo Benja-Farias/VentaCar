@@ -30,7 +30,7 @@ public class Autos {
     @NotBlank
     private String año;
 
-    @NotBlank
+    @NotNull
     private Integer precio;
 
     @NotNull

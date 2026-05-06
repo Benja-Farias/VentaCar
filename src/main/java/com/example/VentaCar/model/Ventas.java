@@ -20,21 +20,24 @@ public class Ventas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_venta;
 
-    @NotBlank
-    @OneToOne()
+    @NotNull 
+    @ManyToOne
+    @JoinColumn(name = "clientes_id_cliente")
     private Clientes clientes;
 
-    @NotBlank
-    @OneToOne()
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "empleados_id_emp")
     private Empleados empleados;
 
-    @NotBlank
-    @OneToOne()
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "autos_id_auto")
     private Autos autos;
 
-    @NotBlank
+    @NotNull
     private Date fecha_venta;
 
-    @NotBlank
+    @NotNull
     private Integer Total_venta;
 }

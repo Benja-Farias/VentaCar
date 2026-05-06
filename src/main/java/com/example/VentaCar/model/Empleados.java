@@ -23,9 +23,9 @@ public class Empleados {
     @NotBlank
     private String nombre_empleado;
 
-    @NotBlank
+    @NotNull
     private Integer telefono;
 
-    @NotNull
+    @NotBlank
     private String email;
 }
