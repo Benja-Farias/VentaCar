@@ -1,0 +1,642 @@
+{
+  "info": {
+    "_postman_id": "29391c1a-9592-4c23-94df-6c36b3ab785b",
+    "name": "VentaCar",
+    "description": "Colección de endpoints para el proyecto bibliotecaduoc.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54571047",
+    "_collection_link": "https://go.postman.co/collection/54571047-29391c1a-9592-4c23-94df-6c36b3ab785b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Autos",
+      "item": [
+        {
+          "name": "Listar autos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/autos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "autos"
+              ]
+            },
+            "description": "Retorna todos los autores."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar autos por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/autos/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "autos",
+                "1"
+              ]
+            },
+            "description": "Busca un autor por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear auto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"patente\": \"HQWW83\",\n    \"marca\": \"Ford\",\n    \"modelo\": \"Mustang\",\n    \"año\": \"2010\",\n    \"precio\": 7600000,\n    \"kilometraje\": 76000,\n    \"estado\": \"Usado\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/autos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "autos"
+              ]
+            },
+            "description": "Crea un autor nuevo. Guarda el id que devuelva para usarlo al crear un libro."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar auto",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"patente\": \"HQWW83\",\n    \"marca\": \"Ford\",\n    \"modelo\": \"Mustang\",\n    \"año\": \"2010\",\n    \"precio\": 7600000,\n    \"kilometraje\": 76000,\n    \"estado\": \"Usado\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/autos/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "autos",
+                "1"
+              ]
+            },
+            "description": "Actualiza un autor existente por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar auto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/autos/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "autos",
+                "1"
+              ]
+            },
+            "description": "Elimina un autor por id."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Ventas",
+      "item": [
+        {
+          "name": "Listar ventas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/ventas",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas"
+              ]
+            },
+            "description": "Retorna todos los autores."
+          },
+          "response": []
+        },
+        {
+          "name": "Listar ventasDTO",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/ventas/con-ventas",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas",
+                "con-ventas"
+              ]
+            },
+            "description": "Retorna todos los autores."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar venta por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/ventas/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas",
+                "1"
+              ]
+            },
+            "description": "Busca un autor por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear venta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fecha_venta\": \"2026-05-06\",\n    \"Total_venta\": 1200000,\n    \"clientes\": { \"id_cliente\": 2 },\n    \"empleados\": { \"id_emp\": 2 },\n    \"autos\": { \"id_auto\": 2 }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/ventas",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "ventas"
+              ]
+            },
+            "description": "Crea un autor nuevo. Guarda el id que devuelva para usarlo al crear un libro."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar venta",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Robert C. Martin\",\n  \"edad\": 74,\n  \"nacionalidad\": \"Estadounidense\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/autores/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "autores",
+                "1"
+              ]
+            },
+            "description": "Actualiza un autor existente por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar venta",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/autores/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "autores",
+                "1"
+              ]
+            },
+            "description": "Elimina un autor por id."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Clientes",
+      "item": [
+        {
+          "name": "Listar clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/clientes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "clientes"
+              ]
+            },
+            "description": "Retorna todos los libros."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar cliente por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/clientes/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "clientes",
+                "1"
+              ]
+            },
+            "description": "Busca un libro por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear cliente",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre_cliente\": \"Manuel\",\n    \"telefono\": 92345678,\n    \"email\": \"Manue.@\",\n    \"direccion\": \"San miguel\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/clientes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "clientes"
+              ]
+            },
+            "description": "Crea un libro nuevo. El campo autor.id debe corresponder a un autor existente."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar cliente",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre_cliente\": \"Manuel\",\n    \"telefono\": 92345678,\n    \"email\": \"Manue.@\",\n    \"direccion\": \"San miguel\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/clientes/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "clientes",
+                "1"
+              ]
+            },
+            "description": "Actualiza un libro existente por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar cliente",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/clientes/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "clientes",
+                "1"
+              ]
+            },
+            "description": "Elimina un libro por id."
+          },
+          "response": []
+        },
+        {
+          "name": "[TEST] Error controlado por GlobalExceptionHandler",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/libros/test-error",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "libros",
+                "test-error"
+              ]
+            },
+            "description": "Endpoint de prueba que lanza una RuntimeException a propósito. Demuestra cómo el GlobalExceptionHandler intercepta el error y devuelve un JSON estructurado con código 500:\n{\n  \"codigo\": 500,\n  \"mensaje\": \"Error interno del servidor\",\n  \"detalle\": \"Este es un error de prueba lanzado intencionalmente\"\n}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Empleados",
+      "item": [
+        {
+          "name": "Listar empleados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/empleados",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "empleados"
+              ]
+            },
+            "description": "Retorna todos los libros."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar empleado por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/empleados/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "empleados",
+                "1"
+              ]
+            },
+            "description": "Busca un libro por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear empleado",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre_empleado\": \"Luis\",\n    \"telefono\": 90123495,\n    \"email\": \"Lui.@\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/empleados",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "empleados"
+              ]
+            },
+            "description": "Crea un libro nuevo. El campo autor.id debe corresponder a un autor existente."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar empleado",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre_empleado\": \"Luis\",\n    \"telefono\": 90123495,\n    \"email\": \"Luis.@\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/empleados/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "empleados",
+                "2"
+              ]
+            },
+            "description": "Actualiza un libro existente por id."
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar empleado",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/empleados/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "empleados",
+                "1"
+              ]
+            },
+            "description": "Elimina un libro por id."
+          },
+          "response": []
+        },
+        {
+          "name": "[TEST] Error controlado por GlobalExceptionHandler",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/libros/test-error",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "libros",
+                "test-error"
+              ]
+            },
+            "description": "Endpoint de prueba que lanza una RuntimeException a propósito. Demuestra cómo el GlobalExceptionHandler intercepta el error y devuelve un JSON estructurado con código 500:\n{\n  \"codigo\": 500,\n  \"mensaje\": \"Error interno del servidor\",\n  \"detalle\": \"Este es un error de prueba lanzado intencionalmente\"\n}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Clima",
+      "item": [
+        {
+          "name": "Clima actual - Santiago (default)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/clima",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "clima"
+              ]
+            },
+            "description": "Devuelve el clima actual de Santiago de Chile usando la API Open-Meteo (lat=-33.45, lon=-70.65).\n\nEjemplo de respuesta:\n{\n  \"latitude\": -33.45,\n  \"longitude\": -70.65,\n  \"current_weather\": {\n    \"temperature\": 14.5,\n    \"windspeed\": 22.3,\n    \"winddirection\": 180,\n    \"weathercode\": 3,\n    \"is_day\": 1,\n    \"time\": \"2024-01-15T12:00\"\n  }\n}"
+          },
+          "response": []
+        },
+        {
+          "name": "Clima actual - coordenadas personalizadas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/clima?lat=-41.47&lon=-72.94",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "clima"
+              ],
+              "query": [
+                {
+                  "key": "lat",
+                  "value": "-41.47",
+                  "description": "Latitud (ej: -41.47 para Puerto Montt)"
+                },
+                {
+                  "key": "lon",
+                  "value": "-72.94",
+                  "description": "Longitud (ej: -72.94 para Puerto Montt)"
+                }
+              ]
+            },
+            "description": "Devuelve el clima actual para coordenadas personalizadas. Este ejemplo usa Puerto Montt. Puedes cambiar lat y lon por cualquier ciudad del mundo."
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
