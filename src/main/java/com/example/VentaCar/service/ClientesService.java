@@ -1,6 +1,5 @@
 package com.example.VentaCar.service;
 
-import com.example.VentaCar.model.Autos;
 import com.example.VentaCar.model.Clientes;
 import com.example.VentaCar.repository.ClientesRepository;
 import org.springframework.beans.factory.annotation.Autowired;

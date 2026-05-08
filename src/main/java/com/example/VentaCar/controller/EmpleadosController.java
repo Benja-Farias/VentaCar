@@ -1,6 +1,5 @@
 package com.example.VentaCar.controller;
 
-import com.example.VentaCar.model.Clientes;
 import com.example.VentaCar.model.Empleados;
 import com.example.VentaCar.service.EmpleadosService;
 import jakarta.validation.Valid;
