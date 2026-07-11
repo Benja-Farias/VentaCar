@@ -1,5 +1,6 @@
 package com.example.VentaCar.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +15,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private Integer id;
 
     @Column(unique = true, nullable = false)

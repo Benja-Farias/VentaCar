@@ -2,6 +2,7 @@ package com.example.VentaCar.model;
 
 import java.sql.Date;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,7 @@ public class Ventas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private Integer id_venta;
 
     @NotNull 
