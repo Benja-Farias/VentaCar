@@ -24,7 +24,7 @@ services:
       mysql:
         condition: service_healthy
     environment:
-      DB_URL: ${DB_URL_DOCKER}
+      DB_URL: ${DB_URL}
       DB_USERNAME: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
